@@ -24,18 +24,20 @@ class AddCourseTest {
 	}
 
 	@Test
-	void addCourseValid() {		
+	void addCourseValid() throws InterruptedException {		
 		driver.get(url+"/addCourse");
 		driver.findElement(By.xpath("//input[@placeholder='Enter Course Name']")).sendKeys("C++");
 		driver.findElement(By.xpath("//input[@placeholder='Enter Course Duration']")).sendKeys("120");
 		driver.findElement(By.xpath("//input[@placeholder='Enter Course Cost']")).sendKeys("120");
 		driver.findElement(By.xpath("//button[normalize-space()='Add']")).click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(500));
-		wait.until(ExpectedConditions.alertIsPresent());
-		Alert alert = driver.switchTo().alert();
-		String txt = alert.getText();
-		alert.accept();
-		assertEquals("Data added Successfully", txt);
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(500));
+//		wait.until(ExpectedConditions.alertIsPresent());
+//		Alert alert = driver.switchTo().alert();
+//		String txt = alert.getText();
+		Thread.sleep(1000);
+		assertEquals("Data added Successfully", driver.switchTo().alert().getText());
+//		alert.accept();
+//		assertEquals("Data added Successfully", txt);
 	}
 	
 	@AfterEach
