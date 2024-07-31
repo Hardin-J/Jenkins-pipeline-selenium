@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 class UpdateUserTest {
 	
 	WebDriver driver;
-	String url = "http://localhost:3001";
+	String url = "http://localhost:3000";
 
 	@BeforeEach
 	void setUp() {

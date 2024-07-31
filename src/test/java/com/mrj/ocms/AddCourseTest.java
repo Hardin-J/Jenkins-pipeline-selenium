@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 class AddCourseTest {
 	WebDriver driver;
-	String url = "http://localhost:3001";
+	String url = "http://localhost:3000";
 
 	@BeforeEach
 	void setUp() {
