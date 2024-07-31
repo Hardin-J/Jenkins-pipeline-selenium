@@ -14,7 +14,7 @@ import com.mrj.ocms.model.Login;
 import com.mrj.ocms.service_impl.LoginServImplementation;
 
 @RestController
-@CrossOrigin("http://localhost:3001")
+@CrossOrigin("http://localhost:3000")
 @RequestMapping("/login")
 public class LoginController {
 
